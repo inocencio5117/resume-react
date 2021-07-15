@@ -1,0 +1,12 @@
+@import "./Colors.scss";
+
+#Main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+  width: 100vw;
+
+  border-radius: 0.45rem;
+}

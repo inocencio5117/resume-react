@@ -1,0 +1,193 @@
+@import '../Styles/Colors.scss';
+
+@mixin percentageParent {
+  width: 100%;
+  height: .4rem;
+
+  margin: .35rem 0rem;
+
+  background-color: $baseColor;
+}
+
+@mixin percentageChild($percentage) {
+  height: 100%;
+  width: $percentage;
+  background-color: $purple;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 1.25rem;
+  margin: 0rem .2rem;
+
+  box-shadow: 0rem 0rem 1rem $baseColor;
+  z-index: 10;
+  overflow-y: scroll;
+
+  width: 17.5rem;
+  height: 95%;
+
+  background-color: $secondaryGrey;
+  border-radius: inherit;
+
+  .side-info::after,
+  .side-lang::after,
+  .side-coding::after {
+    display: inline-block;
+
+    position: relative;
+    top: 0;
+    left: 0;
+
+    content: "";
+    height: .09rem;
+    width: 100%;
+
+    background-color: rgba(100, 100, 100, 0.9);
+
+    margin: 1rem 0rem;
+  }
+
+  .side-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    background-color: $darkerGrey;
+    margin: -1.25rem -1.25rem 1.25rem -1.25rem;
+    padding: 1.25rem;
+
+    > strong {
+      cursor: pointer;
+
+      transition: all 200ms ease-in-out;
+    }
+
+    strong:hover {
+      color: $primaryViolet;
+    }
+
+    > img {
+      width: 85px;
+      height: 85px;
+
+      border-radius: 50%;
+    }
+
+    > img,
+    p,
+    strong {
+      margin: .75rem 0rem;
+    }
+
+    > span {
+      text-align: center;
+      color: $textColor;
+    }
+  }
+
+  .side-info {
+    display: flex;
+    flex-direction: column;
+
+    >div {
+      display: flex;
+      justify-content: space-between;
+
+      span + span {
+        color: $textColor;
+      }
+    }
+  }
+
+  .side-lang {
+    .progress {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      margin: 1rem 0rem;
+
+      > span {
+        margin: 1rem 0rem;
+      }
+
+      .circular-progress {
+        color: $purple;
+      }
+    }
+  }
+
+  .side-coding {
+    >.code {
+      display: flex;
+      justify-content: space-between;
+      margin: 1.25rem 0rem 0rem 0rem;
+    }
+
+    div > span + span {
+      color: $textColor;
+    }
+
+    .html {
+      @include percentageParent;
+
+      >div {
+        @include percentageChild(85%);
+      }
+    }
+
+    .css {
+      @include percentageParent;
+
+      >div {
+        @include percentageChild(78%);
+      }
+    }
+
+    .js {
+      @include percentageParent;
+
+      >div {
+        @include percentageChild(80%);
+      }
+    }
+
+    .python {
+      @include percentageParent;
+
+      >div {
+        @include percentageChild(90%)
+      }
+    }
+  }
+
+  .side-knowledge {
+    h4 {
+      margin-bottom: 1rem;  
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    li {
+      color: $textColor;
+    }
+
+    ul li::before {
+      content: "\2022";
+      color: $baseColor;
+      font-weight: bold;
+      display: inline-block;
+      width: 1rem;
+      margin-left: -1rem;
+    }
+
+    padding: 0.40rem;
+  }
+}

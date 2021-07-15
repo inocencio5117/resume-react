@@ -1,0 +1,15 @@
+@import "./Colors.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $baseColor;
+  
+  color: #fff;
+  font-family: 'Roboto', sans-Serif;
+  font-size: .9rem;
+}

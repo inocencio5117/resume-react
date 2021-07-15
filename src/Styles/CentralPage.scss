@@ -1,0 +1,81 @@
+@import "./Colors.scss";
+
+#central-page {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  overflow-y: scroll;
+  overflow-x: hidden;
+
+  width: 68.75rem;
+  height: 95%;
+
+  background-color: $darkerGrey;
+
+  border-radius: inherit;
+
+  .header {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+    url('../assets/images/code_wallpaper.jpg')
+    center center / cover no-repeat local;
+    
+    display: flex;
+    height: 300px;
+    width: 100%;
+  }
+
+  .projects {
+    padding: 1rem;
+
+    > h2 {
+      font-weight: 400;
+      margin: 1rem 0rem;
+    }
+
+    .proj-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      gap: .625rem;
+
+      > span {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        width: 320px;
+        height: 215px;
+        background-color: $secondaryGrey;
+
+        padding: 1rem;
+        margin: .5rem;
+
+        border-radius: inherit;
+
+        transition: all 250ms ease-in-out;
+
+        a {
+          display: flex;
+          align-items: center;
+
+          text-decoration: none;
+          color: $primaryViolet;
+
+          font-size: 1.175rem;
+          font-weight: 500;
+
+          cursor: pointer;
+
+          .arrow {
+            margin-left: .7rem;
+          }
+        }
+      }
+
+      > span:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
