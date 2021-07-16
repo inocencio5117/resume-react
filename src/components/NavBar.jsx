@@ -1,18 +1,23 @@
-import { React } from 'react';
+import { React, useState } from 'react';
 
 import { BiMenu } from 'react-icons/bi';
+
+import { MobileNav } from './navigation/MobileNav';
+import { NormalNav } from './navigation/NormalNav';
 
 import '../Styles/NavBar.scss';
 
 export function NavBar() {
+  const [open, setOpen] = useState(false);
+
   return (
     <div id="nav-bar">
-      <ul className="nav-links">
-        <li><a href="/">Projects</a></li>
-        <li><a href="/">About</a></li>
-        <li><a href="/">Contact</a></li>
-      </ul>
-      <BiMenu className="hamburguer-menu" />
+      <NormalNav />
+      {open && <MobileNav />}
+      <BiMenu
+        className="hamburguer-menu"
+        onClick={() => setOpen(!open)}
+      />
     </div>
   );
 }
