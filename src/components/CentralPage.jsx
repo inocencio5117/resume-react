@@ -1,7 +1,7 @@
 import { React } from 'react';
 
 import { FaArrowRight } from 'react-icons/fa';
-import { Hamburguer } from './Hamburguer';
+import { NavBar } from './NavBar';
 
 import '../Styles/CentralPage.scss';
 
@@ -29,33 +29,35 @@ export function CentralPage() {
   const descNLW = 'This project was made following the Next Level Week by RocketSeat';
 
   return (
-    <section id="central-page">
-      <Hamburguer />
-      <div className="header">
-        <h1>Discover...</h1>
-      </div>
-
-      <div className="projects">
-        <h2>My Projects</h2>
-
-        <div className="proj-grid">
-          {project('Letmeask', descNLW, 'https://www.google.com')}
-          {project('Proj1', '/')}
-          {project('Proj1', '/')}
-          {project('Proj1', '/')}
-          {project('Proj1', '/')}
-          {project('Proj1', '/')}
-          {project('Proj1', '/')}
-          {project('Proj1', '/')}
-          {project('Proj1', '/')}
-          {project('Proj1', '/')}
-          
+    <>
+      <section id="central-page">
+        <NavBar />
+        <div className="header">
+          <h1>Discover...</h1>
         </div>
-      </div>
 
-      <div className="about">
-        <p />
-      </div>
-    </section>
+        <div className="projects">
+          <h2>My Projects</h2>
+
+          <div className="proj-grid">
+            {project('Letmeask', descNLW, 'https://www.google.com')}
+            {project('Proj1', '/')}
+            {project('Proj1', '/')}
+            {project('Proj1', '/')}
+            {project('Proj1', '/')}
+            {project('Proj1', '/')}
+            {project('Proj1', '/')}
+            {project('Proj1', '/')}
+            {project('Proj1', '/')}
+            {project('Proj1', '/')}
+          
+          </div>
+        </div>
+
+        <div className="about">
+          <p />
+        </div>
+      </section>
+    </>
   );
 }

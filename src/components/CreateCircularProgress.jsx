@@ -8,7 +8,7 @@ import { CircularProgress, Box, Typography } from '@material-ui/core';
 export function CreateCircularProgress(props) {
   return (
     <Box position="relative" display="inline-flex">
-      <CircularProgress variant="determinate" {...props} color="inherit" className="circular-progress" thickness="4" size="3rem" />
+      <CircularProgress variant="determinate" {...props} color="inherit" className="circular-progress" thickness={4} size="3rem" />
       <Box
         top={0}
         left={0}
