@@ -146,7 +146,7 @@
       @include percentageParent;
 
       >div {
-        @include percentageChild(78%);
+        @include percentageChild(80%);
       }
     }
 
@@ -162,7 +162,7 @@
       @include percentageParent;
 
       >div {
-        @include percentageChild(90%)
+        @include percentageChild(75%)
       }
     }
   }

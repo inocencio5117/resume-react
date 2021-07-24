@@ -75,7 +75,7 @@ export function SideBar() {
         {code('HTML', 'html', 85)}
         {code('CSS', 'css', 80)}
         {code('Javascript', 'js', 80)}
-        {code('Python', 'python', 85)}
+        {code('Python', 'python', 75)}
 
       </div>
 

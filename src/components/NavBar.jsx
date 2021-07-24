@@ -2,6 +2,7 @@ import { React, useState } from 'react';
 
 import { BiMenu } from 'react-icons/bi';
 import { MdClose } from 'react-icons/md';
+import { BsThreeDotsVertical } from 'react-icons/bs';
 
 import { MobileNav } from './navigation/MobileNav';
 import { NormalNav } from './navigation/NormalNav';
@@ -20,7 +21,10 @@ export function NavBar() {
     <div id="nav-bar">
       <NormalNav />
       {open && <MobileNav />}
-      {open ? closeIcon : menuIcon}
+      <div className="icons">
+        <BsThreeDotsVertical className="dots-sidebar" />
+        {open ? closeIcon : menuIcon}
+      </div>
     </div>
   );
 }
